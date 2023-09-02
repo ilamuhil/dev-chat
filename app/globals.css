@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: #0f172a;
+}
+
+.jc {
+  @apply justify-center flex;
+}
+
+.jb {
+  @apply justify-between flex;
+}
+
+.ic {
+  @apply items-center flex;
+}
+
+.is {
+  @apply items-start flex;
+}
+
+.ie {
+  @apply items-end flex;
+}
+
+.je {
+  @apply justify-end flex;
+}
+
+.js {
+  @apply justify-start flex;
+}
+
+.jic {
+  @apply justify-center items-center flex;
+}
