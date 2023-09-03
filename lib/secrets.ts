@@ -1,9 +1,11 @@
 const { SecretsManagerClient, GetSecretValueCommand } = require('@aws-sdk/client-secrets-manager')
 
+let secrets: string | null = null
+
 async function getSecret() {
   const secret_name = process.env.AWS_SECRET_NAME
   if (!secret_name) {
-    console.log('Could not find AWS Secret Name')
+    console.log('Could not find AWS Secret Name from env file')
     return undefined
   }
   const client = new SecretsManagerClient({
@@ -28,5 +30,3 @@ async function getSecret() {
 
   return response.SecretString
 }
-
-console.log(getSecret())

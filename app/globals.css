@@ -21,34 +21,40 @@ body {
   background-color: #0f172a;
 }
 
-.jc {
-  @apply justify-center flex;
+.avatar-text-bg {
+  background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(32, 32, 32, 0.9)), rgba(135, 206, 235, 0.3)';
 }
 
-.jb {
-  @apply justify-between flex;
-}
+@layer components {
+  .jc {
+    @apply justify-center flex;
+  }
 
-.ic {
-  @apply items-center flex;
-}
+  .jb {
+    @apply justify-between flex;
+  }
 
-.is {
-  @apply items-start flex;
-}
+  .ic {
+    @apply items-center flex;
+  }
 
-.ie {
-  @apply items-end flex;
-}
+  .is {
+    @apply items-start flex;
+  }
 
-.je {
-  @apply justify-end flex;
-}
+  .ie {
+    @apply items-end flex;
+  }
 
-.js {
-  @apply justify-start flex;
-}
+  .je {
+    @apply justify-end flex;
+  }
 
-.jic {
-  @apply justify-center items-center flex;
+  .js {
+    @apply justify-start flex;
+  }
+
+  .jic {
+    @apply justify-center items-center flex;
+  }
 }

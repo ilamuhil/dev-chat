@@ -7,7 +7,7 @@ type Props = {
 const Hint = (props: Props) => {
   const { children, error, ...rest } = props
   return (
-    <small className={error ? `text-red-500` : `text-slate-100`} {...rest}>
+    <small className={error ? `text-red-500` : `text-gray-100`} {...rest}>
       {children}
     </small>
   )

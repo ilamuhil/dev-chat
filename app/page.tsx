@@ -71,10 +71,10 @@ export default function Home() {
   }
 
   return (
-    <main className='flex justify-center items-center  px-2 h-screen'>
-      <div className='rounded-xl max-w-md min-w-sm  shadow-xxl bg-slate-800 px-4 py-8'>
+    <main className='jic px-2 h-screen'>
+      <div className='rounded-xl max-w-md min-w-sm  shadow-xxl bg-gray-800 px-4 py-8'>
         <h1 className='font-semibold  mx-auto flex justify-center mb-8 text-xl'>Login</h1>
-        <div className='justify-center flex gap-8'>
+        <div className='jc gap-8'>
           <Button
             className='px-8 py-2 border-solid border border-gray-50 rounded-md w-full'
             onClick={() => {
@@ -85,7 +85,7 @@ export default function Home() {
           >
             <div className='flex justify-center gap-3'>
               <p>Google</p>
-              <Image priority src={GoogleIcon} alt='Login with Google' width={18} height={18} />
+              <Image src={GoogleIcon} alt='Login with Google' width={18} height={18} priority />
             </div>
           </Button>
           <Button
@@ -98,15 +98,15 @@ export default function Home() {
           >
             <div className='flex justify-center gap-3'>
               <p>Github</p>
-              <Image src={GithubIcon} alt='Login with Apple' priority width={22} height={22} />
+              <Image src={GithubIcon} alt='Login with Apple' width={22} height={22} priority />
             </div>
           </Button>
         </div>
 
         <div className='flex justify-center items-center my-6'>
-          <div className=' bg-slate-200 h-px w-full'></div>
+          <div className=' bg-gray-200 h-px w-full'></div>
           <span className='px-4 text-white'>Or</span>
-          <div className=' bg-slate-200 h-px w-full'></div>
+          <div className=' bg-gray-200 h-px w-full'></div>
         </div>
         <div className='flex-col gap-2 items-start flex mb-4'>
           <label htmlFor='email' className='text-lg'>
@@ -126,7 +126,7 @@ export default function Home() {
           />
           {formError && <Hint error>{(formError as { message: string })?.message}</Hint>}
           <div className='flex justify-between items-end w-full'>
-            <Button type='submit' className='bg-sky-900 py-2 px-4 rounded-md shadow-lg' onClick={sendOtp}>
+            <Button type='submit' className='bg-primary-900 py-2 px-4 rounded-md shadow-lg' onClick={sendOtp}>
               <div className='flex justify-center gap-2'>
                 <div>{formStep === 1 ? 'Send' : 'Verify'} Otp</div>{' '}
                 <Image
@@ -139,7 +139,7 @@ export default function Home() {
               </div>
             </Button>
 
-            <Button className='border-0 text-sky-400' onClick={() => resetForm}>
+            <Button className='border-0 text-primary-400' onClick={() => resetForm}>
               {' '}
               Reset Form
             </Button>

@@ -1,14 +1,15 @@
-import { getServerSession } from 'next-auth'
-import { options } from '../api/auth/[...nextauth]/options'
-import { Button } from '../components/Button'
+import Navbar from './navbar'
+import SidebarNav from './sidebar-nav'
+import { Suspense } from 'react'
+import Loading from './loading'
 
-export default async function Page() {
-  const session = await getServerSession(options)
-  return session?.user ? (
-    <>
-      <h1>Welcome to Dev Chatboard {session?.user?.email}</h1> <Button>Sign out</Button>
-    </>
-  ) : (
-    <h1>You are not authenticated</h1>
+export default async function Chatboard() {
+  return (
+    <div>
+      <Suspense fallback={<Loading />}>
+        <Navbar />
+        <SidebarNav />
+      </Suspense>
+    </div>
   )
 }

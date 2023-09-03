@@ -9,7 +9,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
     <input
       {...rest}
       ref={ref}
-      className={`bg-slate-500 border border-gray-300 rounded-md focus:outline-none focus:ring-4 focus:ring-slate-500 focus:border-slate-300 transition-colors duration-300 ease-in-out ${
+      className={`bg-gray-500 border border-gray-300 rounded-md focus:outline-none focus:ring-4 focus:ring-gray-500 focus:border-gray-300 transition-colors duration-300 ease-in-out ${
         className ?? ''
       }`}
     />

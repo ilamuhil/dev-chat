@@ -1,4 +1,6 @@
+import { cp } from 'fs'
 import type { Config } from 'tailwindcss'
+import colors from 'tailwindcss/colors'
 
 const config: Config = {
   content: [
@@ -15,6 +17,13 @@ const config: Config = {
     },
     fontFamily: {
       sans: ['Helvetica', 'Arial', 'sans-serif'],
+    },
+    colors: {
+      primary: colors.sky,
+      secondary: colors.amber,
+      gray: colors.slate,
+      danger: colors.red,
+      success: colors.green,
     },
   },
   plugins: [],

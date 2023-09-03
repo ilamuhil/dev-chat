@@ -13,14 +13,6 @@ export const options: NextAuthOptions = {
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
-  events: {
-    async signIn(message) {
-      console.log(message)
-    },
-    async signOut(message) {
-      console.log(message)
-    },
-  },
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_ID as string,

@@ -11,7 +11,7 @@ export const Button = (props: Props) => {
   const { children, loading = false, color, className, ...rest } = props
 
   return (
-    <button className={`flex justify-center ${className}`} {...rest} id=''>
+    <button className={`flex justify-center transition duration-150 ease-in-out ${className}`} {...rest} id=''>
       {loading ? <Image src={SpinnerIcon} priority alt='loading button' /> : children}
     </button>
   )
