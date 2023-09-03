@@ -16,7 +16,7 @@ const SidebarNav = (props: SidebarNavProps) => {
     <aside className='fixed'>
       <section>
         {listItems.map((item, index) => (
-          <ListItem key={index} {...item} />
+          <ListItem key={randId()} {...item} />
         ))}
       </section>
     </aside>

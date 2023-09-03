@@ -1,4 +1,3 @@
-import { cp } from 'fs'
 import type { Config } from 'tailwindcss'
 import colors from 'tailwindcss/colors'
 
